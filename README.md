@@ -21,7 +21,7 @@ GitHub GIG Cymru is a secure, centrally managed GitHub Enterprise platform provi
 ### 1. Sign Up and Access
 
 1. Visit [https://github.com](https://github.com) and sign in with your NHS Wales credentials (if SSO is enabled). 
-2. Request access to your [https://github.com/GIGCymru] (organisation’s GitHub org) via your local service desk. 
+2. Request access to your organisation’s GitHub org via your local service desk. List of organisations can be found here: [https://github.com/GIGCymru](https://github.com/GIGCymru)
 
 ### 2. Create a New Repository
 
