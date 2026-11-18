@@ -19,7 +19,7 @@ expected for NHS Wales GitHub projects.
 | **No.** | **Checklist item** | **Done** | **Guide** |
 | --- | --- | --- | --- |
 | 7 | Access follows the principle of least privilege. | ☐ | [Managing Users, Teams and Permissions](managing-users-teams-and-permissions.md) |
-| 8 | Two-factor authentication (2FA) is enabled for all users. | ☐ | [Getting Started](getting-started.md) |
+| 8 | Two-factor authentication (2FA) or passkeys are enabled for all users. | ☐ | [Getting Started](getting-started.md) |
 | 9 | Admin access is restricted to repository owners only. | ☐ | [Recommended team permission levels](managing-users-teams-and-permissions.md#recommended-team-permission-levels-for-repositories) |
 | 10 | Access is reviewed at least quarterly and removed promptly when no longer required. | ☐ | [Review and audit access](managing-users-teams-and-permissions.md#review-and-audit-access) |
 
@@ -27,7 +27,7 @@ expected for NHS Wales GitHub projects.
 
 | **No.** | **Checklist item** | **Done** | **Guide** |
 | --- | --- | --- | --- |
-| 11 | Branch protection rules are configured on `main` and `release/*` branches. | ☐ | [Configure branch protection rules](branching-and-source-control.md#configure-branch-protection-rules) |
+| 11 | Branch protection rules or rulesets are configured on `main` and `release/*` branches. | ☐ | [Configure branch protection rules](branching-and-source-control.md#configure-branch-protection-rules) |
 | 12 | All changes to `main` and release branches go through a pull request. | ☐ | [Pull Requests and Code Review](pull-requests-and-code-review.md) |
 | 13 | Pull requests require at least one approving review before merging. | ☐ | [Configure branch protection for pull requests](pull-requests-and-code-review.md#configure-branch-protection-for-pull-requests) |
 | 14 | Feature branches are linked to issues and deleted after merging. | ☐ | [Naming conventions](branching-and-source-control.md#naming-conventions) |
@@ -38,7 +38,7 @@ expected for NHS Wales GitHub projects.
 | **No.** | **Checklist item** | **Done** | **Guide** |
 | --- | --- | --- | --- |
 | 16 | A CI workflow runs build and tests on every pull request. | ☐ | [Automating Workflows with GitHub Actions](automating-workflows-with-github-actions.md) |
-| 17 | Action versions are pinned to a specific version tag or commit SHA. | ☐ | [Core workflow characteristics](automating-workflows-with-github-actions.md#core-workflow-characteristics) |
+| 17 | Third-party actions are pinned to a full commit SHA and kept up to date with Dependabot. | ☐ | [Core workflow characteristics](automating-workflows-with-github-actions.md#core-workflow-characteristics) |
 | 18 | Workflow permissions follow the principle of least privilege. | ☐ | [Manage workflow permissions](automating-workflows-with-github-actions.md#manage-workflow-permissions) |
 | 19 | Production deployments require manual approval via a GitHub Environment. | ☐ | [Core workflow characteristics](automating-workflows-with-github-actions.md#core-workflow-characteristics) |
 
@@ -46,7 +46,7 @@ expected for NHS Wales GitHub projects.
 
 | **No.** | **Checklist item** | **Done** | **Guide** |
 | --- | --- | --- | --- |
-| 20 | GitHub Advanced Security (GHAS) is enabled (code scanning, secret scanning, dependency review). | ☐ | [Securing Your Repositories](securing-your-repositories.md) |
+| 20 | GitHub Advanced Security features are enabled (code scanning, secret scanning with push protection, dependency review). | ☐ | [Securing Your Repositories](securing-your-repositories.md) |
 | 21 | Dependabot alerts and security updates are enabled. | ☐ | [Dependabot and dependency updates](securing-your-repositories.md#dependabot-and-dependency-updates) |
 | 22 | No secrets, credentials, or PII are committed to the repository. | ☐ | [Data privacy](securing-your-repositories.md#data-privacy) |
 | 23 | Personal Access Tokens (PATs), if used, expire within 90 days and use minimum required scopes. | ☐ | [Essential security practices](securing-your-repositories.md#essential-security-practices) |

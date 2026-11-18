@@ -30,6 +30,7 @@ without having to read every line of code.
 A PR description **SHOULD** include:
 
 - A brief summary of *what* changed and *why*.
+- Use a pull request template (`.github/pull_request_template.md`) to keep descriptions consistent.
 - Links to related issues (use `Closes #<issue-number>` to auto-close the issue on merge).
 - Any relevant testing steps or screenshots.
 - Notes on deployment considerations or configuration changes.
@@ -55,10 +56,16 @@ When reviewing a pull request, you **SHOULD**:
 
 > **Practical tip**
 >
+> **GitHub Copilot code review** (where licensed) can give a fast first-pass review and
+> suggest fixes. It supplements, and never replaces, a human reviewer. Keep pull requests
+> small and focused so they are easier to review.
+>
 > Use the *Request changes* option when blocking issues are found. Use *Comment* for
 > non-blocking suggestions. Use *Approve* only when the PR is ready to merge.
 
 > **Further reading and information**
+>
+> [Using Copilot code review - GitHub Docs](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review)
 >
 > [About pull request reviews - GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
 
@@ -70,12 +77,13 @@ branches. Recommended settings:
 - **Require a minimum number of reviewers**: At least one approval **SHOULD** be required before merging.
 - **Dismiss stale pull request approvals**: Re-require review when new commits are pushed.
 - **Require review from Code Owners**: Where a `CODEOWNERS` file is defined, require approval from the relevant code owners.
+- **Require approval of the most recent push**: The last person to push cannot approve their own changes.
 - **Require status checks**: All CI checks and security scans **MUST** pass before merging.
 - **Require conversation resolution**: All review comments **MUST** be resolved before merging.
 
 > **Further reading and information**
 >
-> [About code owners - GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customising-your-repository/about-code-owners)
+> [About code owners - GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
 
 ## Merge strategies
 
@@ -86,6 +94,7 @@ Choose the merge strategy that best fits your team's workflow:
 | **Squash and merge** | **RECOMMENDED** for most feature branches. Produces a clean, linear history with one commit per PR. |
 | **Merge commit** | Use when you want to preserve the full branch history. |
 | **Rebase and merge** | Use when you want a linear history without a merge commit and individual commits are meaningful. |
+| **Merge queue** | Use on busy branches to validate each PR against the latest `main` before it merges. |
 
 > **Practices to avoid**
 >

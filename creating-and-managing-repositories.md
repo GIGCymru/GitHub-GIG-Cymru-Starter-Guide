@@ -56,7 +56,7 @@ See [Branching and Source Control](branching-and-source-control.md) for full bra
 
 ### Repository topics
 
-Add relevant [topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customising-your-repository/classifying-your-repository-with-topics) to your repository to improve discoverability across NHS Wales.
+Add relevant [topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) to your repository to improve discoverability across NHS Wales.
 
 > **Examples of good practice**
 >
@@ -75,7 +75,7 @@ include:
 
 > **Further reading and information**
 >
-> [About READMEs - GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customising-your-repository/about-readmes)
+> [About READMEs - GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 
 ## Archiving repositories
 

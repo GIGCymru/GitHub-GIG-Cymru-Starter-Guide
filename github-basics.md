@@ -10,12 +10,12 @@
 | **Commit** | A snapshot of changes to the repository at a specific point in time, identified by a unique SHA hash. |
 | **Pull Request (PR)** | A request to merge changes from one branch into another. PRs enable code review, discussion, and automated checks before merging. |
 | **Fork** | A personal copy of another user's repository. Forks allow you to freely experiment with changes without affecting the original project. |
-| **Issue** | A way to track ideas, enhancements, tasks, and bugs. Issues can be linked to pull requests and project boards. |
+| **Issue** | A way to track ideas, enhancements, tasks, and bugs. Issues can be linked to pull requests and project boards, and organised with sub-issues, labels and issue types. |
 | **GitHub Actions** | GitHub's built-in CI/CD platform for automating workflows such as build, test, and deploy pipelines. |
 | **GitHub Packages** | A package registry for hosting and sharing packages (npm, NuGet, Maven, Docker, etc.) alongside your source code. |
 | **GitHub Projects** | A planning and tracking tool for managing work across repositories using boards, tables, and roadmaps. |
 | **Codespaces** | Cloud-hosted development environments that run directly in the browser or in VS Code, providing consistent, pre-configured setups. |
-| **GitHub Copilot** | An AI-powered coding assistant that suggests code and helps with documentation (requires additional licensing). |
+| **GitHub Copilot** | An AI-powered assistant offering code completion, chat, pull request code review, and agent-based task automation (requires additional licensing). Always review AI-generated output before merging. |
 
 ## Access levels and roles
 
@@ -41,7 +41,7 @@ GitHub GIG Cymru uses role-based access to manage what users can see and do.
 | **Repositories** | Store and version all source code, infrastructure-as-code, and documentation. |
 | **Pull Requests** | Review and approve code changes before they reach the main branch. |
 | **GitHub Actions** | Automate build, test, security scanning, and deployment pipelines. |
-| **GitHub Advanced Security (GHAS)** | Detect secrets, vulnerabilities, and code quality issues automatically. |
+| **GitHub Advanced Security (GHAS)** | Detect secrets, vulnerabilities, and code quality issues automatically (offered as Secret Protection and Code Security). |
 | **GitHub Projects** | Plan and track work items, epics, and milestones across repositories. |
 | **Codespaces** | Provide consistent, cloud-based development environments (where licensed). |
 | **GitHub Copilot** | Accelerate development with AI assistance (where licensed). |
