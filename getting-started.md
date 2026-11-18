@@ -24,7 +24,7 @@ Some features require additional licensing or approval:
 | --- | --- |
 | **GitHub Codespaces** | Contact your local budget holder, then raise a request with the GitHub GIG Cymru service team. |
 | **GitHub Copilot** | Contact your local budget holder, then raise a request with the GitHub GIG Cymru service team. |
-| **GitHub Advanced Security (GHAS)** | Contact the GitHub GIG Cymru service team. |
+| **GitHub Advanced Security (GHAS)** | Contact the GitHub GIG Cymru service team. Secret Protection and Code Security are licensed separately. |
 
 ## Set up GitHub on your computer
 
@@ -64,7 +64,7 @@ cd <repo-name>
 Once you have access to a GitHub organisation:
 
 1. **Complete your profile**: Add your full name and a profile photo to make collaboration easier.
-2. **Enable two-factor authentication (2FA)**: This is **REQUIRED** for all NHS Wales GitHub accounts.
+2. **Enable two-factor authentication (2FA)**: This is **REQUIRED** for all NHS Wales GitHub accounts. Passkeys or security keys are preferred over SMS. See [securing your account with 2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
 3. **Review the organisation's repositories**: Familiarise yourself with existing projects before creating new ones to avoid duplication.
 4. **Read this handbook**: Understand the conventions and practices expected before starting work.
 

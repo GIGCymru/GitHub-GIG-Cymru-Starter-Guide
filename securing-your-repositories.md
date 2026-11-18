@@ -11,6 +11,9 @@ robust security for all NHS Wales GitHub repositories.
 - Never store secrets, credentials, or patient-identifiable data in any repository.
 - Rotate Personal Access Tokens (PATs) every **90 days** and use fine-grained tokens with minimum required scopes.
 - Prefer **GitHub Apps** or **OIDC-based authentication** over PATs for service integrations.
+- Use the built-in `GITHUB_TOKEN` in workflows rather than PATs wherever possible.
+- Use **fine-grained** PATs rather than classic PATs, and set an expiry on every token.
+- Use two-factor authentication or passkeys on every account.
 
 > **Further reading and information**
 >
@@ -18,27 +21,39 @@ robust security for all NHS Wales GitHub repositories.
 
 ## GitHub Advanced Security (GHAS)
 
-GitHub Advanced Security provides three key capabilities for NHS Wales repositories:
+GitHub Advanced Security is now offered as two products: **GitHub Secret Protection** and
+**GitHub Code Security**. Together they provide these capabilities for NHS Wales repositories
+(check with the GitHub GIG Cymru service team which are enabled for your organisation):
 
-| **Feature** | **What it does** |
-| --- | --- |
-| **Code scanning** | Automatically analyses code for vulnerabilities using CodeQL and other tools. |
-| **Secret scanning** | Detects accidentally committed secrets (API keys, tokens, passwords) and alerts you. |
-| **Dependency review** | Flags vulnerable dependencies before they are merged via a pull request. |
+| **Feature** | **Product** | **What it does** |
+| --- | --- | --- |
+| **Secret scanning and push protection** | Secret Protection | Detects secrets (API keys, tokens, passwords) in code, and blocks pushes that contain them. |
+| **Code scanning with CodeQL** | Code Security | Analyses code for vulnerabilities. Use *default setup* for the quickest start. |
+| **Copilot Autofix** | Code Security | Suggests fixes for code scanning alerts (where Copilot is licensed). |
+| **Dependency review** | Code Security | Flags vulnerable dependencies in a pull request before they are merged. |
+| **Dependabot** | All repositories | Alerts on vulnerable dependencies and raises update pull requests. |
 
 All repositories containing production code **SHOULD** have GHAS enabled. Contact the
 GitHub GIG Cymru service team to enable GHAS for your organisation.
 
 > **Practical tip**
 >
-> Enable GHAS *push protection* to block commits that contain known secret patterns before
-> they ever reach the repository.
+> Enable *push protection* to block commits that contain known secret patterns before
+> they ever reach the repository, and use CodeQL *default setup* to enable code scanning
+> without writing a workflow.
+>
+> Alert on, and fix, high-severity findings first. Treat code scanning and secret scanning
+> alerts as part of normal pull request review.
 
 > **Further reading and information**
 >
+> [GitHub security features - GitHub Docs](https://docs.github.com/en/code-security/getting-started/github-security-features)
+>
+> [About push protection - GitHub Docs](https://docs.github.com/en/code-security/secret-scanning/introduction/about-push-protection)
+>
 > [About GitHub Advanced Security - GitHub Docs](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security)
 >
-> [Enabling GitHub Advanced Security for your organisation - GitHub Docs](https://docs.github.com/en/organisations/keeping-your-organisation-secure/managing-security-settings-for-your-organisation/enabling-github-advanced-security-for-your-organisation)
+> [Securing your organization - GitHub Docs](https://docs.github.com/en/code-security/securing-your-organization)
 
 ## Secret scanning
 
@@ -65,6 +80,8 @@ optionally to raise pull requests for version updates.
 
 - Enable *Dependabot alerts* on all repositories.
 - Enable *Dependabot security updates* for automatic PR creation on vulnerable dependencies.
+- Enable *Dependabot version updates* for the `github-actions` ecosystem as well as your code dependencies, so pinned action versions are kept current.
+- Use *grouped updates* to reduce the number of PRs raised.
 - Review and merge Dependabot PRs promptly — treat security updates as high priority.
 
 > **Further reading and information**
@@ -73,12 +90,12 @@ optionally to raise pull requests for version updates.
 
 ## Branch protection and required status checks
 
-Branch protection rules provide an important layer of defence against accidental or
+Branch protection rules (or the newer **repository rulesets**, which are recommended) provide an important layer of defence against accidental or
 malicious changes to critical branches. See [Branching and Source Control](branching-and-source-control.md)
 for the recommended branch protection configuration.
 
-All GHAS checks (code scanning, secret scanning, dependency review) **SHOULD** be added as
-required status checks on `main` and `release/*` branches.
+Code scanning and dependency review checks **SHOULD** be added as required status checks (or
+code scanning merge protection) on `main` and `release/*` branches.
 
 ## Data privacy
 

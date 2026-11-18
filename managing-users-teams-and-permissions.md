@@ -11,7 +11,7 @@ necessary and follow the *principle of least privilege*.
 
 > **Further reading and information**
 >
-> [Managing access to your organisation's repositories - GitHub Docs](https://docs.github.com/en/organisations/managing-user-access-to-your-organisations-repositories)
+> [Managing access to your organisation's repositories - GitHub Docs](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories)
 
 ## Create and manage teams
 
@@ -47,7 +47,7 @@ or a platform team).
 
 > **Further reading and information**
 >
-> [Creating a team - GitHub Docs](https://docs.github.com/en/organisations/organising-members-into-teams/creating-a-team)
+> [Creating a team - GitHub Docs](https://docs.github.com/en/organizations/organizing-members-into-teams/creating-a-team)
 
 ## Review and audit access
 
@@ -73,4 +73,4 @@ access required for the specific task.
 
 > **Further reading and information**
 >
-> [Adding outside collaborators to repositories - GitHub Docs](https://docs.github.com/en/organisations/managing-user-access-to-your-organisations-repositories/managing-outside-collaborators/adding-outside-collaborators-to-repositories-in-your-organisation)
+> [Adding outside collaborators to repositories - GitHub Docs](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-outside-collaborators/adding-outside-collaborators-to-repositories-in-your-organization)

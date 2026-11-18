@@ -37,16 +37,22 @@ Use lowercase names with hyphens for all branches and tags.
 
 ## Configure branch protection rules
 
-Protect your `main` and `release/*` branches with branch protection rules. These rules
-**SHOULD** be configured as follows:
+Protect your `main` and `release/*` branches using **rulesets** (recommended) or classic
+branch protection rules. Rulesets can be layered, apply to many branches by pattern, can be
+set at organisation level, and can be tested in *evaluate* mode before being enforced. These
+rules **SHOULD** be configured as follows:
 
 - **Require pull request reviews before merging**: Ensure at least one approved review before merging.
 - **Require status checks to pass**: Block merges when CI checks fail (e.g. build, tests, GHAS).
 - **Require branches to be up to date before merging**: Prevent stale branches from being merged.
 - **Restrict who can push to matching branches**: Limit direct pushes to branch administrators only.
-- **Require signed commits**: Where possible, enforce GPG-signed commits for auditability.
+- **Require signed commits**: Where possible, enforce signed commits (GPG, SSH or S/MIME) for auditability.
+- **Block force pushes and deletions**: Preserve history on protected branches.
+- **Require a merge queue**: For busy repositories, use a [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) so each PR is tested against the latest `main` before merging.
 
 > **Further reading and information**
+>
+> [About rulesets - GitHub Docs](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets)
 >
 > [About protected branches - GitHub Docs](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
 
@@ -82,7 +88,7 @@ A well-formed commit message **SHOULD**:
 Git is optimised for text files. For large binary files (e.g. images, data exports, compiled
 binaries), follow these guidelines:
 
-- Files over **100 MB** **MUST NOT** be committed directly to a repository.
+- GitHub blocks files over **100 MiB** and warns above 50 MiB, so files over **100 MB** **MUST NOT** be committed directly to a repository.
 - Use **Git LFS (Large File Storage)** for large assets that must be versioned.
 - Use cloud storage links or NHS Wales approved file stores for data files.
 
