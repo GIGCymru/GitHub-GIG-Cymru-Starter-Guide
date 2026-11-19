@@ -1,0 +1,54 @@
+site_name: GitHub GIG Cymru Handbook
+site_description: How NHS Wales organisations use GitHub in practice
+site_url: https://gigcymru.github.io/GitHub-GIG-Cymru-Starter-Guide/
+repo_url: https://github.com/GIGCymru/GitHub-GIG-Cymru-Starter-Guide
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+nav:
+  - Home: index.md
+  - Introduction: introduction.md
+  - Getting started:
+      - GitHub Basics: github-basics.md
+      - Getting Started: getting-started.md
+  - Repositories:
+      - Creating and Managing Repositories: creating-and-managing-repositories.md
+      - Users, Teams and Permissions: managing-users-teams-and-permissions.md
+      - Branching and Source Control: branching-and-source-control.md
+      - Pull Requests and Code Review: pull-requests-and-code-review.md
+  - Automation and security:
+      - GitHub Actions: automating-workflows-with-github-actions.md
+      - Securing Your Repositories: securing-your-repositories.md
+      - Integrating with Azure DevOps: integrating-with-azure-devops.md
+  - Checklist: essential-good-practice-checklist.md
+  - Support: support-and-troubleshooting.md
